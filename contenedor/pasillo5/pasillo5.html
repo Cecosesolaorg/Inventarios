@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario Pasillo 5 | Cecosesola</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="pasillo.css">
+</head>
+
+<body class="pasillo-body">
+    <div class="background-glow"></div>
+
+    <div class="pasillo-wrapper">
+        <header class="pasillo-header">
+            <div class="header-left">
+                <div class="header-info">
+                    <span class="company-tag">CECOSESOLA J085030140</span>
+                    <span class="date-tag" id="current-date">FECHA: --/--/----</span>
+                </div>
+                <div class="header-main">
+                    <h1 class="aisle-title">â˜…-PASILLO SALSA-â˜…</h1>
+                    <p class="brand-name">FERIA DEL ESTE</p>
+                </div>
+            </div>
+            <div class="teams-container">
+                <div class="team-card team-1">
+                    <header>EQUIPO DE TRABAJO</header>
+                    <div class="resp">RESPONSABLE: <strong id="team1-resp1">CARGANDO...</strong></div>
+                    <div class="resp">COMPAÑERO: <strong id="team1-resp2">CARGANDO...</strong></div>
+                </div>
+            </div>
+        </header>
+
+        <section class="actions-bar">
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Escribe para buscar producto..." id="productSearch">
+            </div>
+            <div class="btn-group">
+                <button class="icon-btn trash" id="clearBtn"><span class="icon">🗑️</span></button>
+                <button class="icon-btn blue" id="helperBtn"><span class="icon">👥</span></button>
+                <button class="icon-btn purple" id="fastEditBtn" title="Registro Rápido">⚡</button>
+                <button class="action-btn purple">+ Agregar</button>
+                <button class="action-btn green" id="downloadBtn">💾 Descargar</button>
+            </div>
+        </section>
+
+        <main class="inventory-table-container">
+            <table class="inventory-table">
+                <thead>
+                    <tr>
+                        <th class="col-product">PRODUCTO / CHECKLIST</th>
+                        <th class="col-qty">CANTIDAD</th>
+                    </tr>
+                </thead>
+                <tbody id="inventory-body">
+                    <!-- Products will be injected here -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <!-- Reference Image Style Calculator -->
+    <div id="calcModal" class="modal">
+        <div class="modal-content image-style-modal">
+            <header class="image-style-header">
+                <div class="product-bar"></div>
+                <h3 id="calc-product-name">60</h3>
+                <p class="saved-info">Actualmente guardado: <span id="current-saved-val">0</span></p>
+            </header>
+
+            <div class="image-style-display">
+                <div id="calcResult" class="display-val">0</div>
+            </div>
+
+            <div class="image-style-grid">
+                <!-- Numbers and Red C -->
+                <button class="num-btn">7</button>
+                <button class="num-btn">8</button>
+                <button class="num-btn">9</button>
+
+                <button class="num-btn">4</button>
+                <button class="num-btn">5</button>
+                <button class="num-btn">6</button>
+
+                <button class="num-btn">1</button>
+                <button class="num-btn">2</button>
+                <button class="num-btn">3</button>
+
+                <button class="num-btn">.</button>
+                <button class="num-btn">0</button>
+                <button class="num-btn clear-btn" data-op="C">C</button>
+            </div>
+
+            <!-- Operators Row -->
+            <div class="op-row">
+                <button class="op-btn" data-op="ANS">ANS</button>
+                <button class="op-btn" data-op="+">+</button>
+                <button class="op-btn" data-op="-">−</button>
+                <button class="op-btn" data-op="*">×</button>
+                <button class="op-btn" data-op="/">÷</button>
+            </div>
+
+            <button class="btn-sumar-directo" id="btnSumarCant">
+                <span style="font-size: 1.4rem; vertical-align: middle; margin-right: 5px;">➕</span> SUMAR CANTIDAD
+            </button>
+
+            <div class="image-style-footer">
+                <button class="btn-img-cerrar" onclick="closeCalculator()">Cerrar</button>
+                <button class="btn-img-guardar" onclick="saveCalculation()">
+                    <span style="margin-right: 5px;">✅</span> GUARDAR
+                </button>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.3.0/exceljs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="pasillo.js"></script>
+
+</body>
+
+</html>

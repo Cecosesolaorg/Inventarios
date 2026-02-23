@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Inventario | Cecosesola</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mapa.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+</head>
+
+<body class="mapa-body">
+    <div class="background-glow"></div>
+
+    <div class="map-wrapper">
+        <header class="map-header">
+            <div class="brand">
+                <h1 class="brand-name">Cecosesola</h1>
+                <p class="brand-sub">FERIA DEL ESTE | INVENTARIO</p>
+            </div>
+            <div class="header-logo">
+                <img src="logo-cecosesola-blanco-1.png" alt="Cecosesola Logo">
+            </div>
+            <div class="user-welcome">
+                <p>Bienvenido, <span id="display-name">Usuario</span></p>
+                <button id="where-am-i-btn" class="where-btn">VER EQUIPO DE HOY 👥</button>
+            </div>
+        </header>
+
+        <main class="map-content">
+            <div class="title-box">
+                <h2>INVENTARIO</h2>
+                <div class="title-lines">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+
+            <div class="inventory-grid">
+                <!-- Row 1 -->
+                <a href="contenedor/pasillo1/pasillo1.html" class="map-card active link-card">
+                    <span class="card-num">1</span>
+                    <span class="card-text">PASILLO 1 PASTAS</span>
+                </a>
+                <a href="contenedor/pasillo2/pasillo2.html" class="map-card active link-card">
+                    <span class="card-num">2</span>
+                    <span class="card-text">PASILLO 2 CAFE</span>
+                </a>
+                <a href="contenedor/pasillo3/pasillo3.html" class="map-card active link-card">
+                    <span class="card-num">3</span>
+                    <span class="card-text">PASILLO 3 PANES</span>
+                </a>
+                <a href="contenedor/pasillo4/pasillo4.html" class="map-card active link-card">
+                    <span class="card-num">4</span>
+                    <span class="card-text">PASILLO 4 GALLETAS</span>
+                </a>
+
+                <!-- Row 2 -->
+                <a href="contenedor/pasillo5/pasillo5.html" class="map-card active link-card">
+                    <span class="card-num">5</span>
+                    <span class="card-text">PASILLO 5 SALSA</span>
+                </a>
+                <a href="contenedor/pasillo6/pasillo6.html" class="map-card active link-card">
+                    <span class="card-num">6</span>
+                    <span class="card-text">PASILLO 6 JABON</span>
+                </a>
+                <a href="contenedor/pasillo7/pasillo7.html" class="map-card active link-card">
+                    <span class="card-num">7</span>
+                    <span class="card-text">PASILLO 7 PAPEL</span>
+                </a>
+                <a href="contenedor/pasillo8/pasillo8.html" class="map-card active link-card">
+                    <span class="card-num">8</span>
+                    <span class="card-text">PASILLO 8</span>
+                </a>
+
+                <!-- Row 3 -->
+                <a href="contenedor/pasillo9/pasillo9.html" class="map-card active link-card">
+                    <span class="card-num">9</span>
+                    <span class="card-text">PASILLO GRANOS</span>
+                </a>
+                <a href="contenedor/pasillo10/pasillo10.html" class="map-card active link-card">
+                    <span class="card-num">10</span>
+                    <span class="card-text">CAVA CUARTO</span>
+                </a>
+                <a href="contenedor/pasillo11/pasillo11.html" class="map-card active link-card">
+                    <span class="card-num">11</span>
+                    <span class="card-text">PASILLO ARRIBA 1-3</span>
+                </a>
+                <a href="contenedor/pasillo12/pasillo12.html" class="map-card active link-card">
+                    <span class="card-num">12</span>
+                    <span class="card-text">PASILLO ARRIBA 4-6</span>
+                </a>
+
+                <!-- Row 4 -->
+                <a href="contenedor/pasillo13/pasillo13.html" class="map-card active link-card">
+                    <span class="card-num">13</span>
+                    <span class="card-text">REGUERA</span>
+                </a>
+                <a href="contenedor/pasillo14/pasillo14.html" class="map-card active link-card">
+                    <span class="card-num">14</span>
+                    <span class="card-text">FRUTERIA</span>
+                </a>
+                <a href="contenedor/pasillo15/pasillo15.html" class="map-card active link-card">
+                    <span class="card-num">15</span>
+                    <span class="card-text">MASCOTA</span>
+                </a>
+                <a href="contenedor/coordinacion/coordinacion.html" class="map-card highlight link-card"
+                    style="background: linear-gradient(135deg, #f39c12, #e67e22);">
+                    <span class="card-num">🤝</span>
+                    <span class="card-text">COORDINACIÓN</span>
+                </a>
+
+                <!-- Bottom Row -->
+                <a href="contenedor/pasillo16/pasillo16.html" class="map-card highlight footer-card">
+                    <span class="icon">👇</span>
+                    <span class="card-text">DEPÓSITO ABAJO</span>
+                </a>
+                <a href="contenedor/pasillo17/pasillo17.html" class="map-card highlight footer-card">
+                    <span class="icon">👆</span>
+                    <span class="card-text">DEPÓSITO ARRIBA</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal de Lista de Personal -->
+    <div id="assignmentModal" class="modal-assignment" style="display:none;">
+        <div class="modal-assignment-content">
+            <header class="modal-list-header">
+                <h3>👥 PERSONAL ASIGNADO</h3>
+                <div class="header-divider"></div>
+            </header>
+            <div id="assignment-list" class="staff-full-list">
+                <!-- Se llena con JS -->
+                <p>Cargando lista...</p>
+            </div>
+            <button onclick="document.getElementById('assignmentModal').style.display='none'"
+                class="close-assignment-btn">CERRAR</button>
+        </div>
+    </div>
+
+    <script src="mapa.js"></script>
+</body>
+
+</html>

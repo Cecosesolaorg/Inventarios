@@ -1,0 +1,582 @@
+.pasillo-body {
+    background-color: #0d1117;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    height: auto !important;
+    min-height: 100vh;
+    display: block !important;
+}
+
+.pasillo-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.pasillo-header {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    margin-bottom: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.header-info {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.6rem;
+    color: #40c9ff;
+    opacity: 0.8;
+}
+
+.aisle-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #40c9ff;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.brand-name {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    letter-spacing: 0.5px;
+    margin-top: -2px;
+}
+
+.teams-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.team-card {
+    background: #000;
+    border: 1px solid;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.55rem;
+    min-width: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+}
+
+.team-card header {
+    font-weight: 700;
+    font-size: 0.5rem;
+    text-transform: uppercase;
+    opacity: 0.6;
+    color: inherit !important;
+    margin-bottom: 2px;
+}
+
+.team-1 {
+    border-color: #ff4d4d;
+}
+
+.team-2 {
+    border-color: #2ecc71;
+}
+
+
+.team-1 header {
+    color: #ff4d4d;
+}
+
+.team-2 header {
+    color: #2ecc71;
+}
+
+.team-card .edit-link {
+    color: var(--text-dim);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.actions-bar {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-container {
+    flex: 1;
+    max-width: 450px;
+    background: #161b22;
+    border: 1px solid var(--glass-border);
+    border-radius: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.search-container input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    width: 100%;
+    font-size: 0.85rem;
+}
+
+.btn-group {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.icon-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.trash {
+    background: #ce3c3e;
+}
+
+.action-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+
+.purple {
+    background: #8e44ad;
+}
+
+.green {
+    background: #7fbb00;
+    color: #000;
+}
+
+/* Table Styling */
+.inventory-table-container {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.inventory-table th {
+    background: rgba(64, 201, 255, 0.05);
+    color: #40c9ff;
+    text-align: left;
+    padding: 1rem 1.5rem;
+    font-size: 0.9rem;
+    border-bottom: 2px solid var(--glass-border);
+}
+
+.inventory-table td {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--glass-border);
+    font-size: 0.9rem;
+}
+
+.col-qty {
+    text-align: right;
+    width: 150px;
+    font-weight: 700;
+    border-left: 1px solid var(--glass-border);
+}
+
+.qty-val {
+    color: #7fbb00;
+    font-size: 1.1rem;
+}
+
+.fast-qty-input {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(127, 187, 0, 0.3);
+    color: #7fbb00;
+    font-size: 1.1rem;
+    font-weight: 700;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    text-align: right;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.fast-qty-input:focus {
+    border-color: #7fbb00;
+    background: rgba(127, 187, 0, 0.1);
+}
+
+.fast-qty-input::-webkit-inner-spin-button {
+    display: none;
+}
+
+.diff-tag {
+    font-size: 0.75rem;
+    color: #40c9ff;
+    background: rgba(64, 201, 255, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 0.5rem;
+    font-weight: 400;
+}
+
+.product-row {
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.product-row:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Custom Multi-color Checklist Indicator */
+.indicator {
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid var(--glass-border);
+    border-radius: 4px;
+    display: inline-block;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.indicator.state-1 {
+    background: #7fbb00;
+    /* Green - Coinciden */
+    border-color: #7fbb00;
+}
+
+.indicator.state-2 {
+    background: #ff4d4d;
+    /* Red - No coinciden */
+    border-color: #ff4d4d;
+}
+
+.indicator.state-3 {
+    background: #40c9ff;
+    /* Blue - Special/Custom */
+    border-color: #40c9ff;
+}
+
+/* Modal and Calculator */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: center;
+}
+
+/* Reference Image Style Calculator */
+.image-style-modal {
+    background: #ffffff;
+    width: 380px;
+    border-radius: 2rem;
+    padding: 2rem;
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.image-style-header {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.product-bar {
+    width: 4px;
+    height: 25px;
+    background: #3ca1e3;
+    position: absolute;
+    left: -15px;
+    top: 5px;
+    border-radius: 2px;
+}
+
+.image-style-header h3 {
+    font-size: 1.8rem;
+    color: #444;
+    margin: 0;
+    font-weight: 700;
+}
+
+.saved-info {
+    color: #3ca1e3;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.image-style-display {
+    background: #2c2f3a;
+    border-radius: 0.8rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: right;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.display-val {
+    color: #32d74b;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.image-style-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.num-btn {
+    background: #f8f9fa;
+    border: none;
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #444;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: background 0.1s;
+}
+
+.num-btn:active {
+    background: #e9ecef;
+}
+
+.clear-btn {
+    background: #eb5757 !important;
+    color: #fff !important;
+}
+
+.clear-btn:active {
+    background: #c53030 !important;
+}
+
+.op-row {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.op-btn {
+    flex: 1;
+    background: #f8f9fa;
+    border: 1px dashed #3ca1e3;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #3ca1e3;
+    border-radius: 0.8rem;
+    cursor: pointer;
+}
+
+.btn-sumar-directo {
+    width: 100%;
+    background: #3ca1e3;
+    color: #fff;
+    border: none;
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px rgba(60, 161, 227, 0.3);
+}
+
+.btn-sumar-directo:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+.image-style-footer {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-img-cerrar {
+    flex: 1;
+    background: #bdc3c7;
+    color: #000;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-img-guardar {
+    flex: 2;
+    background: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+}
+
+/* Hide legacy styles */
+.calculator-modal,
+.accum-total-wrapper,
+.calc-display-container,
+.calc-history,
+.calc-result,
+.calc-grid,
+.calc-btn,
+.calc-footer-actions,
+.quick-adder-modal,
+.adder-header,
+.adder-total-display,
+.adder-history-list,
+.adder-input-area,
+.adder-input-field,
+.adder-actions {
+    display: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .aisle-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .pasillo-wrapper {
+        padding: 1rem;
+    }
+
+    .pasillo-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+        padding-top: 1.5rem;
+    }
+
+    .header-info {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .aisle-title {
+        text-align: center;
+        width: 100%;
+        font-size: 1.75rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .teams-container {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-top: 1.5rem;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .actions-bar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .search-container {
+        width: 100%;
+        max-width: none;
+    }
+
+    .btn-group {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .action-btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .col-qty {
+        width: 100px;
+    }
+
+    .calculator-modal {
+        width: 95%;
+        max-width: 320px;
+    }
+
+    .calc-result {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-info {
+        flex-direction: column;
+        gap: 0.25rem;
+        text-align: left;
+    }
+
+    .aisle-title {
+        font-size: 1.5rem;
+    }
+
+    .inventory-table-container {
+        overflow-x: auto;
+    }
+
+    .inventory-table th,
+    .inventory-table td {
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+    }
+}

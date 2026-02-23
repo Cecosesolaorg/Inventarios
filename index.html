@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cecosesola | Bienvenidos</title>
+    <meta name="description" content="Inicia sesión en tu portal premium con estilo y elegancia.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-glow"></div>
+    <main class="login-container">
+        <header class="login-header">
+            <div class="login-logo">
+                <img src="logo-cecosesola-blanco-1.png" alt="Cecosesola Logo">
+            </div>
+            <h1>Bienvenido</h1>
+            <p>Por favor, introduce tus datos para continuar</p>
+        </header>
+        <form id="loginForm" class="login-form">
+            <div class="input-group">
+                <label for="responsable">Responsable Directo</label>
+                <input type="text" id="responsable" name="responsable" placeholder="Nombre completo del responsable"
+                    required>
+                <div class="input-border"></div>
+            </div>
+            <div class="input-group">
+                <label for="companero">Compañero</label>
+                <input type="text" id="companero" name="companero" placeholder="Nombre completo del compañero">
+                <div class="input-border"></div>
+            </div>
+            <button type="submit" id="submitBtn">
+                <span>Entrar</span>
+                <div class="btn-glow"></div>
+            </button>
+        </form>
+        <footer class="login-footer">
+            <p> @RedCecosesola</p>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
